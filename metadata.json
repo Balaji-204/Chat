@@ -1,0 +1,6 @@
+{
+  "name": "SoulSync",
+  "description": "Private partner chatting, couple space, bonding prompts, mood sync, and SEO/ASO growth booster.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
