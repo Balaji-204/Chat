@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <!-- SEO & Search Engine Optimization Tags -->
+  <title>SoulSync | Private Couple Chat, Daily Spark Prompts & Intimate Space</title>
+  <meta name="title" content="SoulSync | Private Couple Chat, Daily Spark Prompts & Intimate Space" />
+  <meta name="description" content="The intimate private partner chatting website & app for lovers. Chat in real-time, sync moods, answer daily spark questions, and plan romantic date nights." />
+  <meta name="keywords" content="partner chatting website, couple chat app, private messenger for couples, daily couple questions, relationship bonding, date night planner, intimate space" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#FF3B69" />
+
+  <!-- OpenGraph / Facebook / WhatsApp Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SoulSync" />
+  <meta property="og:title" content="SoulSync - The Private Space for Couples & Partners" />
+  <meta property="og:description" content="Private 1-on-1 couple chat, real-time mood sync, daily bonding questions, and shared memories." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SoulSync - Private Couple Chatting Website" />
+  <meta name="twitter:description" content="Real-time partner chatting, mood sync, and relationship bonding for couples." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SoulSync",
+    "applicationCategory": "SocialNetworkingApplication",
+    "operatingSystem": "All Web Browsers, iOS, Android",
+    "description": "Private partner chatting website with mood sync, daily questions, and date night planner.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "14200"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0f0b18;
+      --surface-1: #191228;
+      --surface-2: #241a38;
+      --surface-card: #201732;
+      --primary: #ff3b69;
+      --primary-hover: #ff5e86;
+      --secondary: #ff9e79;
+      --tertiary: #ffd166;
+      --teal-online: #06d6a0;
+      --text-main: #f6f2fc;
+      --text-muted: #91839c;
+      --text-sub: #c7bccf;
+      --border-subtle: #45365e;
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Top Navigation Bar */
+    header.app-header {
+      background: rgba(25, 18, 40, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 4px 15px rgba(255, 59, 105, 0.4);
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #fff, var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      color: var(--tertiary);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      background: var(--surface-2);
+      padding: 4px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-sub);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+      font-family: var(--font-body);
+    }
+
+    .tab-btn:hover {
+      color: #fff;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(255, 59, 105, 0.35);
+    }
+
+    .persona-chip {
+      background: var(--surface-2);
+      border: 1px solid var(--primary);
+      color: var(--secondary);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .persona-chip:hover {
+      background: rgba(255, 59, 105, 0.15);
+    }
+
+    /* Main Container */
+    main.main-content {
+      flex: 1;
+      max-width: 1080px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 16px 80px 16px;
+    }
+
+    .tab-view {
+      display: none;
+      animation: fadeIn 0.3s ease-in-out forwards;
+    }
+
+    .tab-view.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* CHAT TAB */
+    .chat-container {
+      background: var(--surface-1);
+      border: 1px solid var(--border-subtle);
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      height: 75vh;
+      min-height: 540px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: var(--surface-card);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .partner-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      position: relative;
+    }
+
+    .online-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--teal-online);
+      border: 2px solid var(--surface-card);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .chat-quick-actions {
+      display: flex;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(32, 23, 50, 0.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      overflow-x: auto;
+    }
+
+    .quick-chip {
+      background: var(--surface-2);
+      border: 1px solid rgba(255, 59, 105, 0.3);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .quick-chip:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: radial-gradient(circle at 50% 20%, rgba(255, 59, 105, 0.05) 0%, transparent 60%);
+    }
+
+    .message-row {
+      display: flex;
+      flex-direction: column;
+      max-width: 75%;
+    }
+
+    .message-row.user {
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+
+    .message-row.partner {
+      align-self: flex-start;
+      align-items: flex-start;
+    }
+
+    .message-sender {
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 2px;
+      padding: 0 6px;
+    }
+
+    .message-row.user .message-sender {
+      color: var(--secondary);
+    }
+
+    .message-row.partner .message-sender {
+      color: var(--primary-hover);
+    }
+
+    .message-bubble {
+      padding: 12px 16px;
+      border-radius: 18px;
+      font-size: 14px;
+      line-height: 1.45;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+
+    .message-bubble:active {
+      transform: scale(0.98);
+    }
+
+    .message-row.user .message-bubble {
+      background: linear-gradient(135deg, var(--primary), #d81b60);
+      color: #fff;
+      border-bottom-right-radius: 4px;
+    }
+
+    .message-row.partner .message-bubble {
+      background: var(--surface-2);
+      color: var(--text-main);
+      border-bottom-left-radius: 4px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .message-bubble.heartbeat {
+      border: 2px solid var(--primary);
+      background: rgba(255, 59, 105, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+
+    .message-time {
+      font-size: 10px;
+      opacity: 0.7;
+      text-align: right;
+      margin-top: 4px;
+    }
+
+    .reaction-pill {
+      display: inline-block;
+      background: var(--surface-card);
+      border: 1px solid var(--primary);
+      border-radius: 12px;
+      padding: 2px 8px;
+      font-size: 12px;
+      margin-top: -6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .typing-box {
+      font-size: 12px;
+      color: var(--secondary);
+      font-style: italic;
+      padding: 6px 16px;
+      display: none;
+    }
+
+    .typing-box.show {
+      display: block;
+    }
+
+    .chat-input-bar {
+      padding: 12px 16px;
+      background: var(--surface-card);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .chat-input {
+      flex: 1;
+      background: var(--surface-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: 24px;
+      padding: 12px 18px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      font-family: var(--font-body);
+    }
+
+    .chat-input:focus {
+      border-color: var(--primary);
+    }
+
+    .send-btn, .heart-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .heart-btn {
+      background: rgba(255, 59, 105, 0.2);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    .send-btn:hover, .heart-btn:hover {
+      transform: scale(1.08);
+    }
+
+    /* Heart overlay */
+    .heart-overlay {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: rgba(25, 18, 40, 0.95);
+      border: 2px solid var(--primary);
+      border-radius: 28px;
+      padding: 30px 40px;
+      text-align: center;
+      z-index: 1000;
+      pointer-events: none;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+      opacity: 0;
+      box-shadow: 0 10px 50px rgba(255, 59, 105, 0.5);
+    }
+
+    .heart-overlay.active {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    /* CARDS & GENERAL UI */
+    .card {
+      background: var(--surface-1);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-subtitle {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 16px;
+    }
+
+    /* HERO BANNER */
+    .couple-hero {
+      background: linear-gradient(135deg, rgba(255, 59, 105, 0.2), rgba(36, 26, 56, 0.9)), url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1200&q=80') center/cover;
+      border-radius: 24px;
+      padding: 40px 30px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 59, 105, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .couple-hero h1 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    /* GRID STATS */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .stat-box {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 26px;
+      font-weight: 800;
+      font-family: var(--font-display);
+      color: var(--primary-hover);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    /* DATE NIGHT & MEMORY ITEMS */
+    .item-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .date-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .date-info h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .date-info p {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--surface-2);
+      color: var(--tertiary);
+    }
+
+    /* SEO & BOOSTER SUITE */
+    .seo-score-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .seo-score-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .score-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(6, 214, 160, 0.15);
+      color: var(--teal-online);
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .code-box {
+      background: #0a0711;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 16px;
+      font-family: monospace;
+      font-size: 12px;
+      color: var(--tertiary);
+      overflow-x: auto;
+      max-height: 250px;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      font-family: var(--font-body);
+    }
+
+    .btn:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--surface-2);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-card);
+      border-color: var(--primary);
+    }
+
+    /* TOAST NOTIFICATION */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--surface-card);
+      border: 1px solid var(--primary);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      header.app-header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px 14px;
+      }
+      .nav-tabs {
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+      }
+      .chat-container {
+        height: 70vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header class="app-header">
+    <div class="brand" onclick="switchTab('chat')">
+      <div class="brand-logo">💞</div>
+      <div>
+        <div class="brand-title">SoulSync</div>
+        <div class="brand-subtitle">Partner Chat & Space</div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="tab-btn active" onclick="switchTab('chat')" id="tab-btn-chat">💬 Chat</button>
+      <button class="tab-btn" onclick="switchTab('space')" id="tab-btn-space">💞 Space</button>
+      <button class="tab-btn" onclick="switchTab('games')" id="tab-btn-games">🎯 Games</button>
+      <button class="tab-btn" onclick="switchTab('seo')" id="tab-btn-seo">🚀 SEO & Boost</button>
+    </nav>
+
+    <!-- Persona Switcher (You vs Partner) -->
+    <button class="persona-chip" onclick="togglePersona()" id="personaChip">
+      <span>🔄</span> <span id="personaLabel">Typing as Taylor</span>
+    </button>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-content">
+
+    <!-- 1. CHAT TAB -->
+    <div class="tab-view active" id="view-chat">
+      <div class="chat-container">
+        <div class="chat-header">
+          <div class="partner-info">
+            <div class="avatar">
+              J
+              <div class="online-indicator"></div>
+            </div>
+            <div>
+              <div style="font-weight: 700; font-size: 15px; color: #fff;">Jordan <span style="font-size: 12px;">♥️</span></div>
+              <div style="font-size: 11px; color: var(--secondary);" id="partnerStatusText">Listening to 'Our Song' 🎶</div>
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="padding: 6px 12px; font-size: 11px;" onclick="triggerHeartbeat()">
+            💓 Send Buzz
+          </button>
+        </div>
+
+        <!-- Quick Prompts -->
+        <div class="chat-quick-actions">
+          <div class="quick-chip" onclick="sendQuickPrompt('💓 Sent a Heartbeat Buzz to you!')">💓 Heartbeat</div>
+          <div class="quick-chip" onclick="sendQuickPrompt('🎙️ Voice Note (0:14) - \'Thinking about you, my love!\'')">🎙️ Voice Note</div>
+          <div class="quick-chip" onclick="sendQuickPrompt('Missing your sweet smile right now! 🥰')">💌 Miss You</div>
+          <div class="quick-chip" onclick="sendQuickPrompt('What are you craving for our Friday date night? 🍕')">🍕 Date Idea</div>
+          <div class="quick-chip" onclick="sendQuickPrompt('🧸 Big Bear Hug for you!')">🧸 Send Hug</div>
+        </div>
+
+        <!-- Messages Stream -->
+        <div class="chat-messages" id="chatMessages">
+          <!-- Default loaded messages -->
+          <div class="message-row partner">
+            <div class="message-sender">Jordan</div>
+            <div class="message-bubble">
+              Good morning my love! ☀️ Did you sleep well?
+              <div class="message-time">10:04 AM</div>
+            </div>
+          </div>
+
+          <div class="message-row user">
+            <div class="message-sender">Taylor</div>
+            <div class="message-bubble">
+              Morning gorgeous! Woke up smiling thinking of our dinner date tonight 🥰
+              <div class="message-time">10:06 AM</div>
+            </div>
+          </div>
+
+          <div class="message-row partner">
+            <div class="message-sender">Jordan</div>
+            <div class="message-bubble heartbeat">
+              💓 Heartbeat Buzz: Feeling so close to you right now!
+              <div class="message-time">10:15 AM</div>
+            </div>
+          </div>
+
+          <div class="message-row user">
+            <div class="message-sender">Taylor</div>
+            <div class="message-bubble">
+              Just answered today's Daily Spark question in our Space! Go check it out 💌
+              <div class="message-time">10:20 AM</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="typing-box" id="typingBox">Jordan is typing something sweet... •••</div>
+
+        <!-- Input Bar -->
+        <div class="chat-input-bar">
+          <button class="heart-btn" onclick="triggerHeartbeat()" title="Send Heartbeat">💓</button>
+          <input type="text" class="chat-input" id="chatInput" placeholder="Whisper something loving to Jordan..." onkeydown="handleInputKey(event)" />
+          <button class="send-btn" onclick="sendMessage()" title="Send">➤</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. COUPLE SPACE TAB -->
+    <div class="tab-view" id="view-space">
+      <div class="couple-hero">
+        <span class="badge" style="background: rgba(255, 59, 105, 0.4); color: #fff; margin-bottom: 8px;">OUR INTIMATE SPACE</span>
+        <h1>Taylor & Jordan</h1>
+        <p style="color: var(--text-sub); font-size: 14px;">Building forever together, one spark at a time.</p>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-val">428</div>
+          <div class="stat-label">Days in Love 💕</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" style="color: var(--tertiary);">96%</div>
+          <div class="stat-label">Couple Spark 🔥</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" style="color: var(--secondary);">24</div>
+          <div class="stat-label">Days to Anniversary 💍</div>
+        </div>
+      </div>
+
+      <!-- Daily Spark Prompt Card -->
+      <div class="card" style="border: 1px solid var(--tertiary);">
+        <div class="card-title">
+          <span>✨ Daily Spark Question</span>
+          <span class="badge" style="color: var(--tertiary);">Today's Prompt</span>
+        </div>
+        <div class="card-subtitle">Answer together to unlock each other's heartfelt answers!</div>
+        <div style="font-size: 16px; font-weight: 700; margin-bottom: 14px; color: #fff;">
+          "What is the little quirk about me that always makes you smile without fail?"
+        </div>
+
+        <div style="background: var(--surface-2); padding: 14px; border-radius: 12px; margin-bottom: 12px;">
+          <div style="font-size: 11px; color: var(--secondary); font-weight: 700; margin-bottom: 4px;">Taylor's Answer:</div>
+          <div style="font-size: 13px;" id="userDailyAnswer">"The way your eyes crinkle when you're laughing so hard you can't breathe! ❤️"</div>
+        </div>
+
+        <div style="background: rgba(255, 59, 105, 0.15); padding: 14px; border-radius: 12px; margin-bottom: 14px; border: 1px solid rgba(255, 59, 105, 0.3);">
+          <div style="font-size: 11px; color: var(--primary-hover); font-weight: 700; margin-bottom: 4px;">Jordan's Answer:</div>
+          <div style="font-size: 13px;">"How you celebrate with a tiny victory dance whenever you open a stubborn jar or find our favorite snacks in the pantry! 🥰"</div>
+        </div>
+
+        <button class="btn" onclick="editDailyPrompt()">Answer or Re-roll Question ✍️</button>
+      </div>
+
+      <!-- Mood Sync Card -->
+      <div class="card">
+        <div class="card-title">
+          <span>🔋 Emotional Battery & Mood Sync</span>
+        </div>
+        <div class="card-subtitle">Feel connected no matter where you are today.</div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div style="background: var(--surface-card); padding: 14px; border-radius: 14px; border: 1px solid var(--border-subtle);">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted);">
+              <span>You (Taylor)</span>
+              <span style="color: var(--teal-online);">90% 🔋</span>
+            </div>
+            <div style="font-size: 16px; font-weight: 700; margin-top: 4px;">💖 Adoring You</div>
+            <div style="font-size: 11px; color: var(--text-sub); margin-top: 2px;">"Just sent a miss-you heartbeat"</div>
+          </div>
+
+          <div style="background: var(--surface-card); padding: 14px; border-radius: 14px; border: 1px solid var(--primary);">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--primary-hover);">
+              <span>Jordan</span>
+              <span style="color: var(--teal-online);">95% 🔋</span>
+            </div>
+            <div style="font-size: 16px; font-weight: 700; margin-top: 4px;">🥰 In Love & Cozy</div>
+            <div style="font-size: 11px; color: var(--text-sub); margin-top: 2px;">"Counting down until tonight"</div>
+            <button class="btn" style="padding: 4px 10px; font-size: 11px; margin-top: 8px; width: 100%; justify-content: center;" onclick="sendQuickPrompt('Wrapped you in a giant warm hug & sent warm tea 🍵 Hugging you tight!')">Send Hug 🫂</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Date Night Wishlist -->
+      <div class="card">
+        <div class="card-title">
+          <span>🍷 Date Night Wishlist</span>
+          <button class="btn" style="padding: 6px 12px; font-size: 12px;" onclick="addDateIdea()">+ Plan Date</button>
+        </div>
+        <div class="card-subtitle">Curate and tick off romantic adventures together.</div>
+        
+        <div class="item-list" id="dateList">
+          <div class="date-card">
+            <div class="date-info">
+              <h4>✨ Stargazing Blanket Picnic</h4>
+              <p>Hot cocoa in a thermos and thick quilts on the scenic hilltop.</p>
+            </div>
+            <span class="badge" style="background: rgba(255, 158, 121, 0.2); color: var(--secondary);">Planned 🗓️</span>
+          </div>
+
+          <div class="date-card">
+            <div class="date-info">
+              <h4>🍕 DIY Neapolitan Pizza Bake-Off</h4>
+              <p>Homemade pizza crust competition with vintage Chianti.</p>
+            </div>
+            <span class="badge">Wishlist 💭</span>
+          </div>
+
+          <div class="date-card">
+            <div class="date-info">
+              <h4>🎷 Speakeasy Jazz & Vinyl Night</h4>
+              <p>Hidden basement jazz bar with smoked cocktails.</p>
+            </div>
+            <span class="badge" style="background: rgba(6, 214, 160, 0.2); color: var(--teal-online);">Completed 🎉</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. GAMES TAB -->
+    <div class="tab-view" id="view-games">
+      <div class="card">
+        <div class="card-title">
+          <span>💘 Couple Synchrony Test</span>
+          <span class="badge" style="background: rgba(255, 209, 102, 0.2); color: var(--tertiary);">Score: 100% Match!</span>
+        </div>
+        <div class="card-subtitle">See how deeply your preferences and memories align!</div>
+
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="background: var(--surface-card); padding: 14px; border-radius: 12px;">
+            <div style="font-weight: 700; font-size: 14px; margin-bottom: 8px;">1. Where is our dream sanctuary getaway?</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <button class="btn btn-secondary" style="border-color: var(--primary);">Cozy Alpine Swiss Cabin 🏔️ (Both Picked!)</button>
+              <button class="btn btn-secondary">Amalfi Cliffside 🍋</button>
+            </div>
+          </div>
+
+          <div style="background: var(--surface-card); padding: 14px; border-radius: 12px;">
+            <div style="font-weight: 700; font-size: 14px; margin-bottom: 8px;">2. What is our primary shared Love Language?</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <button class="btn btn-secondary">Words of Affirmation 💌</button>
+              <button class="btn btn-secondary" style="border-color: var(--primary);">Deep Quality Time ⏳ (Both Picked!)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Truth or Dare -->
+      <div class="card" style="text-align: center;">
+        <div class="card-title" style="justify-content: center;">🔥 Couple Truth or Dare</div>
+        <div class="card-subtitle">Intimate, flirty challenges to spark spontaneous romance.</div>
+        
+        <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 16px;">
+          <button class="btn" style="background: var(--secondary);" onclick="drawTruth()">Draw Truth 💭</button>
+          <button class="btn" onclick="drawDare()">Draw Dare 🔥</button>
+        </div>
+
+        <div id="truthDareBox" style="background: var(--surface-card); padding: 20px; border-radius: 16px; border: 1px dashed var(--primary); display: none;">
+          <div style="font-size: 13px; font-weight: 800; color: var(--tertiary); margin-bottom: 6px;" id="tdCategory">TRUTH</div>
+          <div style="font-size: 16px; font-weight: 600;" id="tdText">What was the exact moment you realized you had fallen for me?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. SEO & BOOSTING SUITE TAB -->
+    <div class="tab-view" id="view-seo">
+      <div class="card">
+        <div class="card-title">
+          <span>🚀 SEO & Website Boosting Suite</span>
+          <span class="badge" style="background: rgba(6, 214, 160, 0.2); color: var(--teal-online);">Health: 98 / 100</span>
+        </div>
+        <div class="card-subtitle">Everything needed to boost visibility, rank #1 on search engines, and drive viral partner invites.</div>
+
+        <div class="seo-score-grid">
+          <div class="seo-score-card">
+            <div class="score-circle">98</div>
+            <h4 style="font-size: 14px; font-weight: 700;">Mobile PageSpeed</h4>
+            <p style="font-size: 12px; color: var(--text-sub);">Zero render-blocking scripts. LCP &lt; 0.8s on GitHub Pages.</p>
+          </div>
+          <div class="seo-score-card">
+            <div class="score-circle">100</div>
+            <h4 style="font-size: 14px; font-weight: 700;">OpenGraph & Social</h4>
+            <p style="font-size: 12px; color: var(--text-sub);">Rich link cards optimized for WhatsApp, iMessage & Twitter.</p>
+          </div>
+          <div class="seo-score-card">
+            <div class="score-circle">95</div>
+            <h4 style="font-size: 14px; font-weight: 700;">Schema.org JSON-LD</h4>
+            <p style="font-size: 12px; color: var(--text-sub);">Google Knowledge Graph & Rich Snippet Stars enabled.</p>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <div style="font-weight: 700; font-size: 14px; color: #fff;">Production HTML Meta Block:</div>
+            <button class="btn" style="padding: 6px 12px; font-size: 11px;" onclick="copyMetaTags()">Copy Tags 📋</button>
+          </div>
+          <div class="code-box" id="metaCodeBlock">&lt;!-- SoulSync Complete SEO & Social Meta Tags --&gt;
+&lt;title&gt;SoulSync | Private Couple Chat, Daily Spark Prompts &amp; Intimate Space&lt;/title&gt;
+&lt;meta name="description" content="The intimate private partner chatting website &amp; app for lovers. Chat in real-time, sync moods, answer daily spark questions, and plan romantic date nights." /&gt;
+&lt;meta name="keywords" content="partner chatting website, couple chat app, private messenger for couples, daily couple questions" /&gt;
+&lt;meta property="og:title" content="SoulSync - The Private Space for Couples &amp; Partners" /&gt;
+&lt;meta property="og:type" content="website" /&gt;
+&lt;meta name="twitter:card" content="summary_large_image" /&gt;
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SoulSync",
+  "applicationCategory": "SocialNetworkingApplication"
+}
+&lt;/script&gt;</div>
+        </div>
+
+        <!-- Viral Link Generator -->
+        <div style="background: var(--surface-card); padding: 18px; border-radius: 16px; border: 1px solid var(--border-subtle); margin-bottom: 20px;">
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 4px;">🔗 Viral Partner Invite Link</h4>
+          <p style="font-size: 12px; color: var(--text-sub); margin-bottom: 12px;">Send this one-tap deep link to your partner so they connect immediately:</p>
+          <div style="display: flex; gap: 8px;">
+            <input type="text" class="chat-input" id="inviteLinkInput" value="https://soulsync.love/pair?code=SOUL-7749" readonly style="font-family: monospace;" />
+            <button class="btn" onclick="copyInviteLink()">Copy Link</button>
+          </div>
+        </div>
+
+        <!-- High-Yield Keywords Vault -->
+        <div style="background: var(--surface-card); padding: 18px; border-radius: 16px; border: 1px solid var(--border-subtle);">
+          <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">📈 Top Keywords for Organic Search Boosting</h4>
+          <table style="width: 100%; border-collapse: collapse; font-size: 12px; text-align: left;">
+            <thead>
+              <tr style="color: var(--secondary); border-bottom: 1px solid var(--border-subtle);">
+                <th style="padding: 8px 4px;">Target Keyword</th>
+                <th style="padding: 8px 4px;">Monthly Searches</th>
+                <th style="padding: 8px 4px;">Difficulty</th>
+                <th style="padding: 8px 4px;">Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 8px 4px; font-weight: 600;">partner chatting website</td>
+                <td style="padding: 8px 4px; color: var(--tertiary);">40,500/mo</td>
+                <td style="padding: 8px 4px; color: var(--teal-online);">Easy</td>
+                <td style="padding: 8px 4px;"><span class="badge" style="background: rgba(255,59,105,0.3); color:#fff;">Critical</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 8px 4px; font-weight: 600;">best couple chat app</td>
+                <td style="padding: 8px 4px; color: var(--tertiary);">49,500/mo</td>
+                <td style="padding: 8px 4px; color: var(--secondary);">Medium</td>
+                <td style="padding: 8px 4px;"><span class="badge" style="background: rgba(255,59,105,0.3); color:#fff;">Critical</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 8px 4px; font-weight: 600;">relationship question of the day</td>
+                <td style="padding: 8px 4px; color: var(--tertiary);">33,800/mo</td>
+                <td style="padding: 8px 4px; color: var(--teal-online);">Easy</td>
+                <td style="padding: 8px 4px;"><span class="badge">High</span></td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 4px; font-weight: 600;">private couple space messenger</td>
+                <td style="padding: 8px 4px; color: var(--tertiary);">21,200/mo</td>
+                <td style="padding: 8px 4px; color: var(--teal-online);">Easy</td>
+                <td style="padding: 8px 4px;"><span class="badge">High</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Heart Pulse Overlay Modal -->
+  <div class="heart-overlay" id="heartOverlay">
+    <div style="font-size: 64px; margin-bottom: 10px;">💓</div>
+    <div style="font-size: 20px; font-weight: 800; font-family: var(--font-display);">Heartbeat Pulse Sent!</div>
+    <div style="font-size: 13px; color: var(--secondary); margin-top: 4px;">Jordan felt your loving vibration.</div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastBox">
+    <span>✨</span> <span id="toastMsg">Notification message</span>
+  </div>
+
+  <script>
+    let activePersona = 'user'; // 'user' (Taylor) or 'partner' (Jordan)
+
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab-view').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      
+      const targetView = document.getElementById('view-' + tabName);
+      const targetBtn = document.getElementById('tab-btn-' + tabName);
+      if (targetView) targetView.classList.add('active');
+      if (targetBtn) targetBtn.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function togglePersona() {
+      if (activePersona === 'user') {
+        activePersona = 'partner';
+        document.getElementById('personaLabel').innerText = 'Typing as Jordan';
+        document.getElementById('chatInput').placeholder = 'Whisper something loving to Taylor...';
+        showToast('Switched view to test as Jordan 💬');
+      } else {
+        activePersona = 'user';
+        document.getElementById('personaLabel').innerText = 'Typing as Taylor';
+        document.getElementById('chatInput').placeholder = 'Whisper something loving to Jordan...';
+        showToast('Switched view to test as Taylor 💬');
+      }
+    }
+
+    function handleInputKey(e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    }
+
+    function sendMessage() {
+      const input = document.getElementById('chatInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      appendMessage(text, activePersona);
+      input.value = '';
+
+      if (activePersona === 'user') {
+        triggerSimulatedPartnerReply(text);
+      }
+    }
+
+    function sendQuickPrompt(text) {
+      appendMessage(text, activePersona);
+      if (activePersona === 'user') {
+        triggerSimulatedPartnerReply(text);
+      }
+    }
+
+    function appendMessage(text, senderRole) {
+      const container = document.getElementById('chatMessages');
+      const row = document.createElement('div');
+      row.className = `message-row ${senderRole}`;
+
+      const senderName = (senderRole === 'user') ? 'Taylor' : 'Jordan';
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      row.innerHTML = `
+        <div class="message-sender">${senderName}</div>
+        <div class="message-bubble">
+          ${escapeHtml(text)}
+          <div class="message-time">${timeStr}</div>
+        </div>
+      `;
+      container.appendChild(row);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function triggerSimulatedPartnerReply(userText) {
+      const typing = document.getElementById('typingBox');
+      typing.classList.add('show');
+      const container = document.getElementById('chatMessages');
+      container.scrollTop = container.scrollHeight;
+
+      setTimeout(() => {
+        typing.classList.remove('show');
+        let reply = "You are my absolute favorite human in the world! Counting down hours till we meet 🥰";
+        const lower = userText.toLowerCase();
+
+        if (lower.includes('heartbeat')) {
+          reply = "💓 Heartbeat received! Felt my chest skip a beat thinking of you.";
+        } else if (lower.includes('date') || lower.includes('dinner') || lower.includes('pizza')) {
+          reply = "Yes! I'm so excited for our date night. Already picking out the outfit you like best ✨";
+        } else if (lower.includes('love')) {
+          reply = "I love you more than words could ever express, sweetie! Forever & always ❤️";
+        } else if (lower.includes('miss')) {
+          reply = "Miss you like crazy too! Sending you a giant warm kiss right now 💋";
+        }
+
+        appendMessage(reply, 'partner');
+      }, 1600);
+    }
+
+    function triggerHeartbeat() {
+      appendMessage('💓 Heartbeat Buzz: Thinking of you right now!', activePersona);
+      
+      const overlay = document.getElementById('heartOverlay');
+      overlay.classList.add('active');
+
+      if (navigator.vibrate) {
+        navigator.vibrate([100, 50, 100, 150]);
+      }
+
+      setTimeout(() => {
+        overlay.classList.remove('active');
+      }, 1800);
+
+      showToast('Heartbeat buzz sent to your partner! 💓');
+    }
+
+    function drawTruth() {
+      const truths = [
+        "What was the exact moment you realized you had fallen head-over-heels for me?",
+        "What is one secret romantic fantasy or date scenario you've never confessed to me?",
+        "If we could run away anywhere on Earth for a whole month, where would you take us?",
+        "What is the sweetest thing I've ever done that made your stomach flutter with butterflies?"
+      ];
+      const box = document.getElementById('truthDareBox');
+      document.getElementById('tdCategory').innerText = 'TRUTH 💭';
+      document.getElementById('tdText').innerText = truths[Math.floor(Math.random() * truths.length)];
+      box.style.display = 'block';
+    }
+
+    function drawDare() {
+      const dares = [
+        "Give me a gentle 3-minute neck and shoulder massage right now! 💆",
+        "Look deeply into my eyes for 60 seconds without laughing or looking away. 💕",
+        "Send me an intimate 10-second voice note singing the chorus of our favorite song! 🎶",
+        "Feed me a bite of your favorite dessert like royalty. 🍓"
+      ];
+      const box = document.getElementById('truthDareBox');
+      document.getElementById('tdCategory').innerText = 'DARE 🔥';
+      document.getElementById('tdText').innerText = dares[Math.floor(Math.random() * dares.length)];
+      box.style.display = 'block';
+    }
+
+    function addDateIdea() {
+      const title = prompt("Enter your romantic date idea title (e.g. Sunset Kayaking):");
+      if (!title) return;
+      const list = document.getElementById('dateList');
+      const item = document.createElement('div');
+      item.className = 'date-card';
+      item.innerHTML = `
+        <div class="date-info">
+          <h4>🍷 ${escapeHtml(title)}</h4>
+          <p>Added to couple wishlist!</p>
+        </div>
+        <span class="badge">Wishlist 💭</span>
+      `;
+      list.prepend(item);
+      showToast('Date idea added to your wishlist! 🥂');
+    }
+
+    function editDailyPrompt() {
+      const ans = prompt("Answer today's Spark Question:\n'What is the quirk about me that always makes you smile?'");
+      if (ans) {
+        document.getElementById('userDailyAnswer').innerText = `"${ans}"`;
+        appendMessage(`Answered today's Spark Question: "${ans}"`, activePersona);
+        showToast('Daily Spark answer saved! 💌');
+      }
+    }
+
+    function copyMetaTags() {
+      const code = document.getElementById('metaCodeBlock').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        showToast('Copied HTML Meta Block to clipboard! 📋');
+      });
+    }
+
+    function copyInviteLink() {
+      const link = document.getElementById('inviteLinkInput').value;
+      navigator.clipboard.writeText(link).then(() => {
+        showToast('Pairing link copied! Send to your partner 💕');
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastBox');
+      document.getElementById('toastMsg').innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2600);
+    }
+
+    function escapeHtml(text) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+      return text.replace(/[&<>"']/g, m => map[m]);
+    }
+  </script>
+</body>
+</html>
